@@ -1,0 +1,154 @@
+:root {
+  --mainColor: #7da500;
+  --secondaryColor: #222222;
+  --mainText: "Open Sans", sans-serif;
+}
+#banner {
+  background: url("../images/about-banner.png");
+  position: relative;
+}
+.left-tree {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: rotate(180deg);
+  width: 40%;
+}
+.right-tree {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  width: 40%;
+}
+
+.banner-wrapper {
+  text-align: center;
+  margin: auto;
+  padding: 50px 0px;
+}
+
+.decoration {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  display: block;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.33%,
+      #7e9a02 33.33%,
+      #88a309 66.66%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.33%,
+      #8a9c07 33.33%,
+      #7ea408 66.66%,
+      transparent 66.66%
+    );
+  background-size: 30px 60px;
+  transform: rotateX(180deg);
+}
+
+.intro-wrapper {
+  margin: 100px auto;
+  width: 80%;
+  text-align: center;
+  line-height: 1.8;
+}
+.line {
+    margin-bottom: 10px;
+}
+
+#odd-section,
+#even-section {
+  text-align: center;
+  height: 100%;
+}
+.odd-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "odd-left odd-right";
+  align-items: center;
+}
+.odd-left {
+  grid-area: odd-left;
+  padding: 7px 15px;
+}
+.odd-left h3,
+.odd-left p {
+  margin-bottom: 10px;
+}
+.odd-left a {
+  background: var(--mainColor);
+  color: white;
+  padding: 10px 15px;
+  font-weight: 600;
+  border: 1px solid var(--mainColor);
+  transition: 0.3s linear;
+}
+.odd-left a:hover {
+  background: white;
+  color: var(--mainColor);
+}
+.odd-right {
+  grid-area: odd-right;
+}
+.odd-box img {
+  width: 100%;
+}
+
+.even-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "even-left even-right";
+  align-items: center;
+}
+
+.even-right {
+  grid-area: even-right;
+  padding: 7px 15px;
+}
+.even-right h3,
+.even-right p {
+  margin-bottom: 10px;
+}
+.even-right a {
+  background: var(--mainColor);
+  color: white;
+  padding: 10px 15px;
+  font-weight: 600;
+  border: 1px solid var(--mainColor);
+  transition: 0.3s linear;
+}
+.even-right a:hover {
+  background: white;
+  color: var(--mainColor);
+}
+.even-left {
+  grid-area: even-left;
+}
+.even-left img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .odd-box {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "odd-left"
+      "odd-right";
+  }
+
+  .even-box {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "even-right"
+      "even-left";
+  }
+
+  .odd-box img, .even-box img {
+      margin-top: 15px;
+  }
+}

@@ -1,0 +1,98 @@
+:root {
+  --mainColor: #7da500;
+  --secondaryColor: #222222;
+  --mainText: "Open Sans", sans-serif;
+}
+#banner {
+  background: url("../images/about-banner.png");
+  position: relative;
+}
+.left-tree {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: rotate(180deg);
+  width: 40%;
+}
+.right-tree {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  width: 40%;
+}
+
+.banner-wrapper {
+  text-align: center;
+  margin: auto;
+  padding: 50px 0px;
+}
+
+.decoration {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  display: block;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.33%,
+      #7e9a02 33.33%,
+      #88a309 66.66%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.33%,
+      #8a9c07 33.33%,
+      #7ea408 66.66%,
+      transparent 66.66%
+    );
+  background-size: 30px 60px;
+  transform: rotateX(180deg);
+}
+
+.faq-wrapper {
+  width: 70%;
+  margin: 100px auto;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: 15px 0px;
+  font-weight: 600;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--mainColor);
+  color: white;
+}
+
+.panel {
+  display: block;
+  padding: 0 30px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+#ad {
+  background: var(--mainColor);
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .faq-wrapper {
+    width: 100%;
+  }
+}

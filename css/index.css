@@ -1,0 +1,391 @@
+:root {
+  --mainColor: #7da500;
+  --secondaryColor: #222222;
+  --mainText: "Open Sans", sans-serif;
+}
+#banner {
+  background: url("../images/main-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.banner-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40em;
+  grid-template-areas: "banner-left banner-right";
+  grid-column-gap: 55px;
+  justify-items: center;
+  align-items: center;
+}
+.banner-left {
+  grid-area: banner-left;
+}
+.banner-left h5 {
+  margin-bottom: 20px;
+}
+.banner-left p {
+  margin-bottom: 10px;
+}
+.banner-left button {
+  background: var(--mainColor);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.banner-left button:hover {
+  background: white;
+  color: var(--mainColor);
+}
+.banner-right {
+  grid-area: banner-right;
+  background: var(--secondaryColor);
+  height: 85%;
+  width: 80%;
+  padding: 10px 20px;
+  text-align: center;
+}
+.banner-right input,
+select,
+textarea {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 30px;
+  padding: 7px;
+  font-weight: 600;
+}
+.banner-right input[type="submit"] {
+  padding: 0px;
+  cursor: pointer;
+}
+
+.review-wrapper {
+  display: grid;
+  justify-items: center;
+  margin: 30px 0px;
+}
+
+#services {
+  background: var(--secondaryColor);
+  color: white;
+  padding: 100px 0px;
+}
+
+.service-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "service-title tree-trimming stump-grinding"
+    "service-title tree-removal storm-cleanup";
+  grid-column-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.service-title {
+  grid-area: service-title;
+}
+.tree-trimming {
+  grid-area: tree-trimming;
+}
+.stump-grinding {
+  grid-area: stump-grinding;
+}
+.tree-removal {
+  grid-area: tree-removal;
+}
+.storm-cleanup {
+  grid-area: storm-cleanup;
+}
+.service-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+.service-box a {
+  color: white;
+}
+.service-box .service-bg {
+  max-width: 340px;
+  width: 100%;
+  height: 200px;
+}
+.service-box .service-icon {
+  position: absolute;
+  left: 40%;
+  top: 25%;
+}
+.service-box-title {
+  position: absolute;
+  left: 31%;
+  top: 70%;
+}
+.service-title {
+  text-align: center;
+}
+.service-title h3,
+.small-tree {
+  margin-bottom: 20px;
+}
+.line {
+  margin-bottom: 31px;
+}
+
+.service-contact {
+  background: var(--mainColor);
+  color: white;
+}
+.service-contact-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0px;
+}
+.service-contact-wrapper a {
+  text-decoration: underline;
+  color: white;
+}
+.service-contact span {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  display: block;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.33%,
+      #7e9a02 33.33%,
+      #88a309 66.66%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.33%,
+      #8a9c07 33.33%,
+      #7ea408 66.66%,
+      transparent 66.66%
+    );
+  background-size: 30px 60px;
+  transform: rotateX(180deg);
+}
+
+#works {
+  padding: 100px 0px;
+  background: url("../images/works-bg.png");
+}
+.work-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+.work-box {
+  border: 2px dotted var(--mainColor);
+  margin-bottom: 30px;
+  padding: 20px;
+  height: 250px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: min-content 2fr;
+  grid-column-gap: 20px;
+  grid-template-areas:
+    "icon title"
+    "icon subtitle";
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+.certified:hover {
+  background: linear-gradient(rgba(38, 38, 38, 0.78), rgba(38, 38, 38, 0.78)),
+    url("../images/certified-works.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.safest:hover {
+  background: linear-gradient(rgba(38, 38, 38, 0.78), rgba(38, 38, 38, 0.78)),
+    url("../images/safest-tree-removal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.expert:hover {
+  background: linear-gradient(rgba(38, 38, 38, 0.78), rgba(38, 38, 38, 0.78)),
+    url("../images/expert-tree-trimmer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.low:hover {
+  background: linear-gradient(rgba(38, 38, 38, 0.78), rgba(38, 38, 38, 0.78)),
+    url("../images/low-cost-cutting.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.work-box i {
+  grid-area: icon;
+}
+.work-box h4 {
+  grid-area: title;
+}
+.work-box p {
+  grid-area: subtitle;
+  font-weight: 600;
+}
+
+#clients {
+  margin: 100px 0px;
+  text-align: center;
+}
+.clients-wrapper {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  grid-template-areas: "client-left client-right";
+  justify-items: center;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.client-left i {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+.client-left {
+  grid-area: client-left;
+  text-align: left;
+}
+.client-right {
+  grid-area: client-right;
+  background: white;
+  width: 100%;
+  z-index: 3;
+}
+.client-right img {
+  width: 80%;
+}
+.client-left-wrapper {
+  display: flex;
+  height: 170px;
+  overflow: hidden;
+  padding: 10px;
+  transform: translateX(520px);
+}
+.client-left-item {
+  width: 500px;
+  transform: translateX(0px);
+  transition: 0.7s ease-in-out;
+}
+
+#ad {
+  background: url("../images/work-bg.png");
+}
+.ad-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "ad-left ad-right";
+  gap: 0px;
+}
+.ad-left {
+  grid-area: ad-left;
+}
+.ad-left img {
+  max-width: 600px;
+  height: 100%;
+}
+.ad-right {
+  grid-area: ad-right;
+}
+.ad-right h3,
+.ad-right p {
+  margin-bottom: 15px;
+}
+.ad-right h3 {
+  color: var(--mainColor);
+  text-align: center;
+}
+.work-line {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .banner-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "banner-left"
+      "banner-right";
+  }
+  .baner-left {
+    justify-self: center;
+  }
+  .banner-right {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  .review-wrapper img {
+    width: 50%;
+  }
+
+  .service-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "service-title"
+      "tree-trimming"
+      "stump-grinding"
+      "tree-removal"
+      "storm-cleanup";
+  }
+  .service-title {
+    margin-bottom: 30px;
+  }
+
+  .work-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .work-box {
+    height: 100%;
+  }
+
+  .clients-wrapper {
+    grid-template-columns: min-content;
+    grid-template-areas:
+      "client-left"
+      "client-right";
+    text-align: left;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .client-right {
+    width: 100%;
+  }
+  .client-right img {
+    max-width: 500px;
+    width: 90%;
+  }
+  .client-left-wrapper {
+    transform: translateX(0px);
+    width: 100%;
+  }
+
+  .ad-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ad-left"
+      "ad-right";
+    gap: 0px;
+  }
+  .ad-left img {
+    width: 100%;
+  }
+  .ad-right {
+    justify-self: center;
+    text-align: center;
+  }
+}

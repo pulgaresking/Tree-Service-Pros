@@ -1,0 +1,143 @@
+:root {
+  --mainColor: #7da500;
+  --secondaryColor: #222222;
+  --mainText: "Open Sans", sans-serif;
+}
+#banner {
+  background: url("../images/about-banner.png");
+  position: relative;
+}
+.left-tree {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: rotate(180deg);
+  width: 40%;
+}
+.right-tree {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  width: 40%;
+}
+
+.banner-wrapper {
+  text-align: center;
+  margin: auto;
+  padding: 50px 0px;
+}
+
+.decoration {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  display: block;
+  background: linear-gradient(
+      -45deg,
+      transparent 33.33%,
+      #7e9a02 33.33%,
+      #88a309 66.66%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 33.33%,
+      #8a9c07 33.33%,
+      #7ea408 66.66%,
+      transparent 66.66%
+    );
+  background-size: 30px 60px;
+  transform: rotateX(180deg);
+}
+
+.intro-wrapper {
+  margin: 100px auto;
+  width: 80%;
+  text-align: center;
+  line-height: 1.8;
+}
+.line {
+  margin-bottom: 10px;
+}
+
+#form {
+    margin: 50px 0px;
+}
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "form-left form-right";
+  justify-items: center;
+  align-items: center;
+}
+.form-left {
+  grid-area: form-left;
+  background-image: url("../images/contact-tree-bg.jpg");
+  background-color: rgba(77, 77, 77, 0.74);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 40px;
+  width: 80%;
+}
+.form-left h3 {
+  color: var(--mainColor);
+  margin-top: 30px;
+}
+.form-left h5 {
+  color: white;
+}
+.form-right {
+  grid-area: form-right;
+  box-shadow: 0px 0px 16px -8px #000;
+  padding: 40px;
+  border-bottom: 3px solid var(--mainColor);
+}
+.form-right input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+}
+.form-right .small {
+  width: 32%;
+}
+.form-right .medium {
+  width: 48%;
+}
+.form-right input[type="submit"] {
+  width: 100px;
+  height: 50px;
+  background: var(--mainColor);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-num {
+  float: right;
+}
+.contact-num span {
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 800px) {
+  .form-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "form-left"
+      "form-right";
+      gap: 30px;
+  }
+
+  .form-right .small, .form-right .medium {
+      width: 100%;
+  }
+}
