@@ -45,8 +45,8 @@
   grid-area: banner-right;
   background: var(--secondaryColor);
   height: 85%;
-  width: 80%;
-  padding: 10px 20px;
+  width: 100%;
+  overflow: hidden;
   text-align: center;
 }
 .banner-right input,
